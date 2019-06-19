@@ -12,8 +12,8 @@ module DatamuseWrapper
       response.parsed_response
     end
 
-    def self.sounds_like()
-
+    def self.sounds_like(word)
+      repsonse = get("sl=#{word}")
     end
 
     def self.rhyme_with()
