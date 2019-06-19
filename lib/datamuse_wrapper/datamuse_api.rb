@@ -16,8 +16,8 @@ module DatamuseWrapper
       repsonse = get("sl=#{word}")
     end
 
-    def self.rhyme_with()
-
+    def self.rhyme_with(word)
+      response = get("rel_rhy=#{word}")
     end
 
     def self.spelt_like()
