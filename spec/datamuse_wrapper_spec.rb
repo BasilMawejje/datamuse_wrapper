@@ -3,7 +3,11 @@ RSpec.describe DatamuseWrapper do
     expect(DatamuseWrapper::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "queries words with meaning like 'ringing in the ears'" do
+    uri = URI('http://api.datamuse.com/words?ml=ringing+in+the+ears')
+
+    response = Net::HTTP.get(uri)
+
+    expect(response).to be_an_instance_of(String)
   end
 end
